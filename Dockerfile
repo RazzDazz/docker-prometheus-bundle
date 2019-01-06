@@ -57,7 +57,22 @@ RUN mkdir -p /tmp/nodeexporter && \
     tar xvf ${NODE_EXPORTER_TAR} && \
     cp ${NODE_EXPORTER_TAR_FOLDER}/node_exporter /usr/local/bin/ && \
     rm -rf /tmp/nodeexporter
-    
+
+#
+# Install SNMP Exporter
+#
+
+ENV SNMP_EXPORTER_VER v0.6.0
+ENV SNMP_EXPORTER_TAR snmp_exporter-0.6.0.linux-amd64.tar.gz
+ENV SNMP_EXPORTER_TAR_FOLDER snmp_exporter-0.6.0.linux-amd64
+
+RUN mkdir -p /tmp/snmpexporter && \
+    cd /tmp/snmpexporter/ && \
+    curl -LO https://github.com/prometheus/snmp_exporter/releases/download/${SNMP_EXPORTER_VER}/${SNMP_EXPORTER_TAR} && \
+    tar xvf ${SNMP_EXPORTER_TAR} && \
+    cp ${SNMP_EXPORTER_TAR_FOLDER}/snmp_exporter /usr/local/bin/ && \
+    rm -rf /tmp/snmpexporter
+
 #
 # Finalize 
 #
