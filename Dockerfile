@@ -83,7 +83,7 @@ COPY prometheus.yml /tmp/prometheus.yml.sample
 # Copy helper scripts into container
 COPY docker-entrypoint.sh /tmp/
 RUN chmod 777 /tmp/docker-entrypoint.sh
-COPY supervisor_prometheus.conf /tmp/
+COPY supervisor_prometheus_bundle.conf /tmp/
 
 #
 EXPOSE 9090
