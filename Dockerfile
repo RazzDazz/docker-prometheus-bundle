@@ -62,9 +62,9 @@ RUN mkdir -p /tmp/nodeexporter && \
 # Install SNMP Exporter
 #
 
-ENV SNMP_EXPORTER_VER v0.6.0
-ENV SNMP_EXPORTER_TAR snmp_exporter-0.6.0.linux-amd64.tar.gz
-ENV SNMP_EXPORTER_TAR_FOLDER snmp_exporter-0.6.0.linux-amd64
+ENV SNMP_EXPORTER_VER v0.14.0
+ENV SNMP_EXPORTER_TAR snmp_exporter-0.14.0.linux-amd64.tar.gz
+ENV SNMP_EXPORTER_TAR_FOLDER snmp_exporter-0.14.0.linux-amd64
 
 RUN mkdir -p /tmp/snmpexporter && \
     cd /tmp/snmpexporter/ && \
