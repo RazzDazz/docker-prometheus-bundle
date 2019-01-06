@@ -6,4 +6,4 @@ then
 fi
 
 echo "Starting supervisord to run prometheus ..." 
-exec /usr/bin/supervisord --nodaemon --configuration /opt/supervisor_prometheus.conf
+exec /usr/bin/supervisord --nodaemon --configuration /opt/supervisor_prometheus_bundle.conf
